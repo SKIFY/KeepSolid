@@ -12,13 +12,14 @@
 
 # Скріншоти виконання програми
 - Початковий вид сайту
-![image](https://github.com/user-attachments/assets/0b54e693-f04a-47e5-b895-6a54880027d3
 
+![image](https://github.com/user-attachments/assets/0b54e693-f04a-47e5-b895-6a54880027d3)
 - Після натискання кнопки "Зміни текст"
+
 ![image](https://github.com/user-attachments/assets/11898fcf-63c2-4b03-a354-9bbee7ce1332)
-
 - Наведення на одну з картинок
-![image](https://github.com/user-attachments/assets/0b753861-9728-4eb3-a2da-335859acaf71)
 
+![image](https://github.com/user-attachments/assets/0b753861-9728-4eb3-a2da-335859acaf71)
 - Після на натискання на картинку
+
 ![image](https://github.com/user-attachments/assets/e95bcb61-8109-4eaf-83a8-7d9370d1c7b6)
