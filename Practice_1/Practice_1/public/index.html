@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мій веб-сайт</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Вітаємо на моєму сайті!</h1>
+  <button onclick="changeText()">Зміни текст</button>
+</header>
+
+<main>
+  <p id="text">Це початковий текст.</p>
+
+  <!-- Галерея зображень -->
+  <h2>Галерея зображень</h2>
+  <div class="gallery">
+    <img src="images/image1.jpg" alt="Image 1" onclick="openImage('images/image1.jpg')">
+    <img src="images/image2.jpg" alt="Image 2" onclick="openImage('images/image2.jpg')">
+    <img src="images/image3.jpg" alt="Image 3" onclick="openImage('images/image3.jpg')">
+    <img src="images/image4.jpg" alt="Image 4" onclick="openImage('images/image4.jpg')">
+  </div>
+</main>
+
+<!-- Модальне вікно (lightbox) -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img id="lightboxImage" src="" alt="Large Image">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
