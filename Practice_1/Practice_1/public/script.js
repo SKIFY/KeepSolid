@@ -1,15 +1,21 @@
-// Функція для зміни тексту
-function changeText() {
-  document.getElementById("text").innerText = "Текст змінено! Це новий текст.";
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".read-more");
 
-// Функція для відкриття зображення у модальному вікні
-function openImage(image) {
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightboxImage").src = image;
-}
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+      let card = this.parentElement;
+      let fullText = card.querySelector(".full-text");
+      let shortText = card.querySelector(".description");
 
-// Функція для закриття модального вікна
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
+      if (fullText.style.display === "none" || fullText.style.display === "") {
+        fullText.style.display = "block";
+        shortText.style.display = "none";
+        this.textContent = "Згорнути";
+      } else {
+        fullText.style.display = "none";
+        shortText.style.display = "-webkit-box";
+        this.textContent = "Читати далі";
+      }
+    });
+  });
+});

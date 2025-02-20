@@ -3,34 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мій веб-сайт</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Ласкаво просимо!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Нові стилі для головної сторінки */
+    .welcome {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 300px;
+      text-align: left;
+    }
+
+    .hero-image {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .fact-card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(255, 153, 204, 0.2);
+      margin: 30px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fact-card::before {
+      content: '🐾';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      font-size: 40px;
+      opacity: 0.1;
+      transform: rotate(45deg);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(255, 153, 204, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .button {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .button::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .button:hover::after {
+      left: 100%;
+    }
+
+    .welcome h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .animated-cat {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
 <header>
-  <h1>Вітаємо на моєму сайті!</h1>
-  <button onclick="changeText()">Зміни текст</button>
+  <h1>Ласкаво просимо на сайт про котиків!</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="breeds.html">Породи</a></li>
+      <li><a href="video.html">Відео</a></li>
+    </ul>
+  </nav>
 </header>
-
 <main>
-  <p id="text">Це початковий текст.</p>
+  <section class="welcome">
+    <div class="hero-section">
+      <div class="hero-content">
+        <h2>Чому ми любимо котиків? 🐾</h2>
+        <p>Ласкаво просимо у чарівний світ котів! Тут ви знайдете все, що потрібно знати про наших пухнастих друзів.</p>
+      </div>
+      <div class="hero-image">
+        <img src="images/main/cat_welcome.gif" alt="Милий котик" class="animated-cat">
+      </div>
+    </div>
 
-  <!-- Галерея зображень -->
-  <h2>Галерея зображень</h2>
-  <div class="gallery">
-    <img src="images/image1.jpg" alt="Image 1" onclick="openImage('images/image1.jpg')">
-    <img src="images/image2.jpg" alt="Image 2" onclick="openImage('images/image2.jpg')">
-    <img src="images/image3.jpg" alt="Image 3" onclick="openImage('images/image3.jpg')">
-    <img src="images/image4.jpg" alt="Image 4" onclick="openImage('images/image4.jpg')">
-  </div>
+    <div class="fact-card">
+      <h3>Чи знаєте ви?</h3>
+      <p>Коти можуть видавати понад 100 різних звуків! Це набагато більше, ніж собаки, які зазвичай мають близько 10 різних звуків. 🐱</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Породи котів</h3>
+        <p>Дізнайтеся про різноманітні породи котів та їх унікальні характеристики.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Цікаві відео</h3>
+        <p>Переглядайте захоплюючі відео з котами та їх веселими пригодами.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Корисні поради</h3>
+        <p>Отримайте поради щодо догляду за вашим пухнастим другом.</p>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <a href="breeds.html" class="button">Дослідити породи</a>
+      <a href="video.html" class="button">Дивитися відео</a>
+    </div>
+  </section>
 </main>
+<script>
+  // Додаємо клас active до поточної сторінки
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('nav a');
 
-<!-- Модальне вікно (lightbox) -->
-<div id="lightbox" class="lightbox">
-  <span class="close" onclick="closeLightbox()">&times;</span>
-  <img id="lightboxImage" src="" alt="Large Image">
-</div>
-
-<script src="script.js"></script>
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Веселі котячі відео</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Веселі котячі відео</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="breeds.html">Породи</a></li>
+      <li><a href="video.html">Відео</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="video-container">
+    <h2>Локальні відео</h2>
+
+    <div class="local-video">
+      <video controls>
+        <source src="videos/cat_video.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео.
+      </video>
+      <p>Вдумчливий котик =^._.^=</p>
+    </div>
+
+    <div class="local-video">
+      <video controls>
+        <source src="videos/cat_video1.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео.
+      </video>
+      <p>Смішний котик :)</p>
+    </div>
+  </section>
+
+  <section class="video-container">
+    <h2>Популярні відео з YouTube</h2>
+
+    <div class="video-card">
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/J---aiyznGQ" frameborder="0" allowfullscreen></iframe>
+      <p>Котик грає на піаніно!</p>
+    </div>
+
+    <div class="video-card">
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/5dsGWM5XGdg" frameborder="0" allowfullscreen></iframe>
+      <p>Відбірка смішних моментів.</p>
+    </div>
+
+    <div class="video-card">
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/vhg7Xm4FXAY" frameborder="0" allowfullscreen></iframe>
+      <p>Чарівна вечеря.</p>
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
